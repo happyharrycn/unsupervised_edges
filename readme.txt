@@ -67,10 +67,15 @@ a) Getting the dataset. We used the following dataset for training and testing
 b) Preparing data. We provide pre-processing scripts in python to select frames within videos (as described in Sec 3.1 of our paper). The scripts are located in the folder py_preprocessing. 
 
   cd py_preprocessing
-  process_videos.py --video_list path/to/video/list --output_folder path/to/output/folder/dataset_name [--copy]
+  process_videos.py --video_list path/to/video/list \
+                    --output_folder path/to/output/folder/dataset_name [--copy]
+
 The script will copy selected frames from a list of videos (see an example in video_list.txt in the same folder) to the output folder. It will also setup folder structure and generate a *_pairs.txt that includes all frame pairs. Use --copy only for sintel dataset (so we dont filter frames)
 
-  match_pairs.py --pair_list path/to/video_pairs.txt --output_folder path/to/output/folder/dataset_name --dm_bin ../bins/deepmatching
+  match_pairs.py --pair_list path/to/video_pairs.txt \
+                 --output_folder path/to/output/folder/dataset_name \
+                 --dm_bin ../bins/deepmatching
+                 
 The script will run deep matching over the selected frame pairs. This is used for training. 
 
 Now you can point rootPath in globalParam.m to your dataset root folder. We assume the following folder hierarchy. 
