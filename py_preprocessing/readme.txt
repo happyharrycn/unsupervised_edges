@@ -1,0 +1,1 @@
+A set of python scripts that pre-process the videos and select good frames
