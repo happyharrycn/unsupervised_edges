@@ -35,9 +35,11 @@ d) EpicFlow is needed and we included a modified version in folder epicflow. You
  make
 Also you need to copy the compiled binary file into ./bins
 
-e) Due to the compilation of (c) and (d), our code ONLY work in linux. Small modifications to makefiles are required for OS X.   
+e) Due to the compilation of (c) and (d), our code ONLY work in linux. Small modifications to makefiles are required for OS X. 
 
-f) Next, please compile mex code from within Matlab (note: linux64 binaries included):
+f) Our python script and epicflow code has a dependency on python-opencv and opencv (only 2.4.x is supported for now)  
+
+g) Next, please compile mex code from within Matlab (note: linux64 binaries included):
   mex private/edgesDetectMex.cpp -outdir private [OMPPARAMS]
   mex private/edgesNmsMex.cpp    -outdir private [OMPPARAMS]
   mex private/spDetectMex.cpp    -outdir private [OMPPARAMS]
