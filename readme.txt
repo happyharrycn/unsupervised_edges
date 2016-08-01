@@ -89,6 +89,8 @@ BSR/BSDS500/data/groundTruth --> root_data_folder/bsds/edges/GroundTruth
 c) Run the pipeline. mainLoop.m includes our training pipeline. Once the datasets are ready, simply call
 mainLoop 
 
+Note that we will use ./tmp to cache intermediate results. Do remember to clear the cache (delete all files) if you are re-running the experiments.
+
 4. Trouble Shooting
 
 a) Cannot load any more object with static TLS (when compiled with openmp)
@@ -99,7 +101,7 @@ This is usually caused by the Matlab's own version of libraries. Run
   ldd path/to/epicflow
 in terminal and Matlab to check the lib versions been linked. You can fix it by removing the wrongly linked libs in Matlab folder (e.g. libopencv* in path/to/matlab/bin/glnxa64 or libstdc* in path/to/matlab/sys/os/glnxa64)
 
-Further issues regarding the code, please send me an email at yli440@gatech.edu
+For further issues regarding the code, please send me an email at yli440@gatech.edu
 
 
 ###################################################################
