@@ -10,8 +10,8 @@ bsdsParam = globalParam('bsds');
 
 % setup iteration numbers
 prevFolder = []; currFolder = [];
-numIter = 5; startIter = 1;
-% we gradually increase our threshold for each iteration (20%)
+numIter = 4; startIter = 1;
+% we gradually increase our threshold for each iteration (10%)
 ratio = 1.1;
 
 % buffer resutls into txt file
