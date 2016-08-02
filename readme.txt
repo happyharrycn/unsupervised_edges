@@ -40,9 +40,9 @@ e) Due to the compilation of (c) and (d), our code ONLY work in linux. Small mod
 f) Our python script and epicflow code has a dependency on python-opencv and opencv (only 2.4.x is supported for now)  
 
 g) Next, please compile mex code from within Matlab (note: linux64 binaries included):
-  mex private/edgesDetectMex.cpp -outdir private [OMPPARAMS]
-  mex private/edgesNmsMex.cpp    -outdir private [OMPPARAMS]
-  mex private/spDetectMex.cpp    -outdir private [OMPPARAMS]
+  mex ./structured_edges/private/edgesDetectMex.cpp -outdir ./structured_edges/private [OMPPARAMS]
+  mex ./structured_edges/private/edgesNmsMex.cpp    -outdir ./structured_edges/private [OMPPARAMS]
+  mex ./structured_edges/private/spDetectMex.cpp    -outdir ./structured_edges/private [OMPPARAMS]
 Here [OMPPARAMS] are parameters for OpenMP and are OS and compiler dependent.
   Windows:  [OMPPARAMS] = '-DUSEOMP' 'OPTIMFLAGS="$OPTIMFLAGS' '/openmp"'
   Linux V1: [OMPPARAMS] = '-DUSEOMP' CFLAGS="\$CFLAGS -fopenmp" LDFLAGS="\$LDFLAGS -fopenmp"
