@@ -80,6 +80,10 @@ f) A fully trained edge model for RGB images is available as part of this releas
 
 5. History.
 
+Version modified by Yin Li
+ - new interface for edge detection
+ - modified training code for learning from motion edges
+
 Version NEW
  - now hosting on github (https://github.com/pdollar/edges)
  - suppress Mac warnings, added Mac binaries
