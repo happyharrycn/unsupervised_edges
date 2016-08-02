@@ -9,7 +9,7 @@ function [E,O,inds,segs] = edgesDetect( I, Ig, model )
 % non-maximum suppression. See edgesTrain for parameter details.
 %
 % USAGE
-%  [E,O,inds,segs] = edgesDetect( I, model )
+%  [E,O,inds,segs] = edgesDetect( I, Ig, model )
 %
 % INPUTS
 %  I          - [h x w x 3] color input image
@@ -55,6 +55,7 @@ else
   I = imPad(I,p,'symmetric'); Ig = imPad(Ig,p,'symmetric');
   % compute features and apply forest to image
   [chnsReg,chnsSim] = edgesChns( I, opts );
+  % modified by YL
   s=opts.sharpen; if(s), Ig = convTri(rgbConvert(Ig,'rgb'),1); end
   if(nargout<4), [E,inds] = edgesDetectMex(model,Ig, chnsReg,chnsSim);
   else [E,inds,segs] = edgesDetectMex(model,Ig, chnsReg,chnsSim); end

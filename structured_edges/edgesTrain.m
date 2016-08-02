@@ -8,6 +8,8 @@ function model = edgesTrain( trnImgDir, trnGtDir, varargin )
 %  model = edgesTrain( trnImgDir, trnGtDir, opts )
 %
 % INPUTS
+%  trnImgDir  - folder with all training images
+%  trnGtDir   - folder with all edge maps
 %  opts       - parameters (struct or name/value pairs)
 %   (1) model parameters:
 %   .imWidth    - [32] width of image patches
@@ -65,7 +67,7 @@ function model = edgesTrain( trnImgDir, trnGtDir, varargin )
 % See also edgesDemo, edgesChns, edgesDetect, forestTrain
 %
 % Structured Edge Detection Toolbox      Version 3.01
-% Code written by Piotr Dollar, 2014.
+% Code written by Piotr Dollar, 2014. Modified by Yin
 % Licensed under the MSR-LA Full Rights License [see license.txt]
 
 % get default parameters
@@ -219,7 +221,7 @@ ftrs = zeros(k,length(fids),'single');
 labels = zeros(gtWidth,gtWidth,k,'uint8'); k = 0;
 tid = ticStatus('Collecting data',30,1);
 
-% loop over all images
+% modified by YL
 for i = 1:nImgs
   % get image and compute channels
   me=imread(fullfile(trnGtDir, [imgIds{i} fileExt]));
