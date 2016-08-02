@@ -1,4 +1,5 @@
 function [] = initMotEdges(param, prevFolder, currFolder)
+% initalize motion edges using sobel
 
 %% set up folder
 flowFolder = fullfile(param.flowPath, prevFolder);

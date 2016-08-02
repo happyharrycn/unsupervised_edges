@@ -1,5 +1,5 @@
 function [] = initFlows(param, subfolder)
-% run epic flow with sobel edges (using -sobel)
+% run epic flow with sobel edges 
 % resutls are stored at subfolder
 
 %% set up folder

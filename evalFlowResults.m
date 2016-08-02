@@ -1,5 +1,5 @@
 function [errList, aep] = evalFlowResults(subfolder)
-% subfolder indexes the current iteration of exp
+% valuate current flow results on sintel
 
 %% check params
 % use sintel param

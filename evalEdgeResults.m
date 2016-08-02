@@ -1,5 +1,5 @@
 function [ODS, OIS, ODT, AP, R50] = evalEdgeResults(model, subfolder, mode)
-% evaluate current edge det model against bsds
+% evaluate current edge det model on bsds
 % subfolder indexes the current iteration of exp
 
 %% check params

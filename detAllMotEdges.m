@@ -1,4 +1,5 @@
 function [] = detAllMotEdges(param, prevFolder, currFolder, model)
+% detect motion edges on flow field
 
 %% set up folder
 flowFolder = fullfile(param.flowPath, prevFolder);

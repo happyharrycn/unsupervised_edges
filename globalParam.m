@@ -1,6 +1,5 @@
 function param = globalParam(dataset)
-
-%%  This function setup all the params
+% setup all the params
 
 %% set up paths
 addpath('./flow_utils');
