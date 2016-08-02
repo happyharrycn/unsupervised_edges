@@ -4,6 +4,7 @@ function param = globalParam(dataset)
 
 %% set up paths
 addpath('./flow_utils');
+addpath('./structured_edges');
 % put piotr's toolbox path here
 addpath(genpath('./toolbox-master'));
 % put root data folder here
