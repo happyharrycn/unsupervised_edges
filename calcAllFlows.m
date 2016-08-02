@@ -1,8 +1,13 @@
-function [] = calcAllFlows(param, subfolder, vIter)
+function [] = calcAllFlows(param, subfolder, vIter, kAlpha)
 % run epic flow using specified edge maps
-% subfolder indexes the current iteration of exp
+
+if nargin < 4
+  % by default we will smooth the flow map a bit more
+  kAlpha = 1.1;
+end
+
 if nargin < 3
-  vIter = 5; 
+  vIter = 5; kAlpha = 1.1;
 end
 
 %% set up folder
@@ -41,8 +46,8 @@ parfor i=1:length(pairList{1})
   if exist(edgeFileName, 'file') && ~exist(outFileName, 'file')
     fprintf('EpicFlow for %s\n', outFileName)
     % note all flow param should be after flow flag!
-    myCmd = sprintf('%s %s %s %s %s -E %s %s -iter %d', ...
-      param.efBin, curImgName, nextImgName, dmFileName, outFileName, edgeFileName, param.flowFlag, vIter);
+    myCmd = sprintf('%s %s %s %s %s -E %s %s -iter %d -alpha %f', ...
+      param.efBin, curImgName, nextImgName, dmFileName, outFileName, edgeFileName, param.flowFlag, vIter, kAlpha);
     system(myCmd);
   end
   
