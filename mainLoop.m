@@ -15,6 +15,12 @@ ratio = 1.1;
 
 % buffer resutls into txt file
 fid = fopen('new_result.txt', 'w');
+
+% create tmp folder if it does not exist
+if ~isdir(videoParam.tmpFolder)
+  mkdir(videoParam.tmpFolder)
+end
+
 % re-allocate matlab parpool if any
 delete(gcp); pObj = parpool(videoParam.numProc);
 
