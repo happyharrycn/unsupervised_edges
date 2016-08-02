@@ -48,7 +48,7 @@ parfor i=1:length(flowList)
   motEdge = edgesDetect(flowMap, img, model);
 
   % refine the edges by align to super pixel boundaries
-  seg = spDetect(img, []); mask = (bwdist(seg==0)<2); motEdge = motEdge .* mask;
+  seg = spDetect(img, []); mask = (bwdist(seg==0)<3); motEdge = motEdge .* mask;
 
   % write to png file
   if sum(motEdge(:)>0.4) < 50

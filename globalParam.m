@@ -40,7 +40,7 @@ param.flowPath = fullfile(rootPath, param.dataset, 'flows');
 param.motEdgePath = fullfile(rootPath, param.dataset, 'motEdges');
 
 %% number of samples used for training
-param.numSamples = 5000;
+param.numSamples = 1000;
 
 %% counter and tmp file folder
 param.iter = 0;
