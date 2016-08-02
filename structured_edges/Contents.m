@@ -13,6 +13,8 @@
 %
 % Structured Edge detector code:
 %   edgesChns       - Compute features for structured edge detection.
+%   edgesDetect     - Detect edges in image. Modified by YL.
+%   edgesTrain      - Train structured edge detector. Modified by YL.
 %
 % Edge detection evaluation code:
 %   edgesEval       - Run and evaluate structured edge detector on BSDS500.
